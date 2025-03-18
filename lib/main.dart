@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,14 +11,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0XFF181818),
+        backgroundColor: const Color(0XFF181818),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 80),
-              Row(
+              const SizedBox(height: 80),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Column(
@@ -40,10 +40,13 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 120),
-              Text('Total Balance', style: TextStyle(color: Colors.white60)),
-              SizedBox(height: 5),
-              Text(
+              const SizedBox(height: 120),
+              const Text(
+                'Total Balance',
+                style: TextStyle(color: Colors.white60),
+              ),
+              const SizedBox(height: 5),
+              const Text(
                 '\$5 194 482',
                 style: TextStyle(
                   fontSize: 44,
@@ -51,16 +54,16 @@ class MyApp extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Row(
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color(0xFFF1B33B),
+                      color: const Color(0xFFF1B33B),
                       borderRadius: BorderRadius.circular(45),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 50,
                       ),
