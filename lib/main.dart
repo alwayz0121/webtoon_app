@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webtoon_app/widgets/button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,16 +10,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color(0XFF181818),
+        backgroundColor: Color(0XFF181818),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 80),
-              const Row(
+              SizedBox(height: 80),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Column(
@@ -40,13 +41,10 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 120),
-              const Text(
-                'Total Balance',
-                style: TextStyle(color: Colors.white60),
-              ),
-              const SizedBox(height: 5),
-              const Text(
+              SizedBox(height: 120),
+              Text('Total Balance', style: TextStyle(color: Colors.white60)),
+              SizedBox(height: 5),
+              Text(
                 '\$5 194 482',
                 style: TextStyle(
                   fontSize: 44,
@@ -54,21 +52,19 @@ class MyApp extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFF1B33B),
-                      borderRadius: BorderRadius.circular(45),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 50,
-                      ),
-                      child: Text('Transfer', style: TextStyle(fontSize: 18)),
-                    ),
+                  Button(
+                    text: 'Transfer',
+                    bgColor: Color(0xFFF1B33B),
+                    textColor: Colors.black,
+                  ),
+                  Button(
+                    text: 'Request',
+                    bgColor: Color(0xff1f2123),
+                    textColor: Colors.white,
                   ),
                 ],
               ),
